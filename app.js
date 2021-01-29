@@ -11,9 +11,10 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 const team = []
+getManagerInput()
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
-function getManagerInput() {
+function getManagerInput() { 
 inquirer
     .prompt([
         {
@@ -39,7 +40,7 @@ inquirer
 
     ])
     .then((response) => {
-        const m = new Manager(response.name, respone.id, response.email, response.officenumber)
+        const m = new Manager(response.name, response.id, response.email, response.officenumber)
         team.push(m)
     getTeamInput()
     
@@ -47,7 +48,7 @@ inquirer
      
     
 });
-
+}
 function getEngineerInput() {
     inquirer
         .prompt([
@@ -74,7 +75,7 @@ function getEngineerInput() {
     
         ])
         .then((response) => {
-            const e = new Engineer(response.name, respone.id, response.email, response.githubuser)
+            const e = new Engineer(response.name, response.id, response.email, response.githubuser)
             team.push(e)
         getTeamInput()
         
@@ -82,7 +83,7 @@ function getEngineerInput() {
          
         
     });
-
+ }
     function getInternInput() {
     inquirer
         .prompt([
@@ -109,13 +110,15 @@ function getEngineerInput() {
     
         ])
         .then((response) => {
+            const i = new Intern(response.name, response.id, response.email, response.school)
+            team.push(i)
         getTeamInput()
         
            
          
         
     });
-
+    }
 function getTeamInput () {
     inquirer
     .prompt([
@@ -138,13 +141,15 @@ function getTeamInput () {
         getInternInput()
     }
     else{
-        render()
+    var html = render(team) 
+    console.log(html)
     }
 });
 }
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
+
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
