@@ -74,6 +74,8 @@ function getEngineerInput() {
     
         ])
         .then((response) => {
+            const e = new Engineer(response.name, respone.id, response.email, response.githubuser)
+            team.push(e)
         getTeamInput()
         
            
