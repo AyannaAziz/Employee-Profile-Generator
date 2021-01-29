@@ -79,7 +79,7 @@ function getEngineerInput() {
         
     });
 
-    function getEngineerInput() {
+    function getInternInput() {
     inquirer
         .prompt([
             {
@@ -99,8 +99,8 @@ function getEngineerInput() {
           },
           {
             type: 'input',
-            message: 'What is your github username?',
-            name: 'githubuser',
+            message: 'What is your school name?',
+            name: 'school',
           },
     
         ])
