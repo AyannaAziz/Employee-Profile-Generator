@@ -19,6 +19,10 @@ function getManagerInput() {
   inquirer
     .prompt([
       {
+        message: "Hello Manager!",
+        name: "managermessage"
+      },
+      {
         type: "input",
         message: "What is your name?",
         name: "name",
