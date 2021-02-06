@@ -24,7 +24,7 @@ The Employee Profile Generator is a node.js CLI that takes in information about 
 ## Demo
 Click this link to see the video demo of this application.
 
-* https://drive.google.com/file/d/12iG10Xl-rw5yni9vJyQ6nz5ga9TxpBNW/preview>
+* https://drive.google.com/file/d/12iG10Xl-rw5yni9vJyQ6nz5ga9TxpBNW/view
 
 ![](profilegen.png)
 
